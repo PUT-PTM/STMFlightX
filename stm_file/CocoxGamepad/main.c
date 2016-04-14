@@ -3,9 +3,9 @@
 /* Include my libraries here */
 
 #include "defines.h"
-#include "tm_stm32f4_usb_hid_device.h"
-#include "tm_stm32f4_delay.h"
-#include "tm_stm32f4_disco.h"
+#include "tm/tm_stm32f4_usb_hid_device.h"
+#include "tm/tm_stm32f4_delay.h"
+#include "tm/tm_stm32f4_disco.h"
 #include "stm32f4_discovery_lis302dl.h"
 
 int acc_x, acc_y, acc_z;

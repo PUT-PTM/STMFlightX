@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<history>
+   <processor signature="arm-none-eabi-gcc -mcpu=cortex-m4 -mthumb -g -nostartfiles -Map=stm32f429_project.map -O0 --gc-sections -LC:\CooCox\CoIDE\configuration\ProgramData\stm32f429_project -TC:\CooCox\CoIDE\configuration\ProgramData\stm32f429_project/arm-gcc-link.ld -g">
+      <target file="stm32f429_project.elf" lastModified="1541522fb3e">
+         <source file="..\obj\stm32f4xx_syscfg.o" lastModified="15415226f69"/>
+         <source file="..\obj\usb_core.o" lastModified="15415227237"/>
+         <source file="..\obj\stm32f4xx_sdio.o" lastModified="154152274e7"/>
+         <source file="..\obj\tm_stm32f4_usb_hid_device.o" lastModified="15415227777"/>
+         <source file="..\obj\stm32f4xx_cryp_aes.o" lastModified="15415227a46"/>
+         <source file="..\obj\stm32f4xx_dma2d.o" lastModified="15415227cd6"/>
+         <source file="..\obj\stm32f4xx_hash.o" lastModified="15415227f76"/>
+         <source file="..\obj\usbd_usr.o" lastModified="15415228206"/>
+         <source file="..\obj\stm32f4xx_hash_sha1.o" lastModified="15415228497"/>
+         <source file="..\obj\stm32f4xx_usart.o" lastModified="15415228756"/>
+         <source file="..\obj\stm32f4xx_pwr.o" lastModified="154152289f6"/>
+         <source file="..\obj\stm32f4xx_can.o" lastModified="15415228cb5"/>
+         <source file="..\obj\stm32f4xx_wwdg.o" lastModified="15415228f35"/>
+         <source file="..\obj\stm32f4xx_hash_md5.o" lastModified="154152291b6"/>
+         <source file="..\obj\stm32f4xx_dac.o" lastModified="15415229446"/>
+         <source file="..\obj\tm_stm32f4_disco.o" lastModified="154152296c7"/>
+         <source file="..\obj\stm32f4xx_ltdc.o" lastModified="15415229976"/>
+         <source file="..\obj\startup_stm32f4xx.o" lastModified="15415229bf7"/>
+         <source file="..\obj\stm32f4xx_crc.o" lastModified="15415229e78"/>
+         <source file="..\obj\usbd_hid_core.o" lastModified="1541522a0f8"/>
+         <source file="..\obj\stm32f4xx_iwdg.o" lastModified="1541522a379"/>
+         <source file="..\obj\usbd_core.o" lastModified="1541522a609"/>
+         <source file="..\obj\main.o" lastModified="1541522a8d8"/>
+         <source file="..\obj\stm32f4xx_rcc.o" lastModified="1541522ab87"/>
+         <source file="..\obj\stm32f4xx_adc.o" lastModified="1541522ae27"/>
+         <source file="..\obj\stm32f4xx_dcmi.o" lastModified="1541522b0b8"/>
+         <source file="..\obj\tm_stm32f4_delay.o" lastModified="1541522b348"/>
+         <source file="..\obj\usbd_desc.o" lastModified="1541522b6b3"/>
+         <source file="..\obj\stm32f4xx_cryp_des.o" lastModified="1541522b972"/>
+         <source file="..\obj\stm32f4xx_cryp.o" lastModified="1541522bc02"/>
+         <source file="..\obj\stm32f4xx_gpio.o" lastModified="1541522be83"/>
+         <source file="..\obj\stm32f4xx_flash.o" lastModified="1541522c123"/>
+         <source file="..\obj\stm32f4xx_sai.o" lastModified="1541522c3e2"/>
+         <source file="..\obj\system_stm32f4xx.o" lastModified="1541522c662"/>
+         <source file="..\obj\stm32f4xx_dma.o" lastModified="1541522c8f3"/>
+         <source file="..\obj\usb_bsp.o" lastModified="1541522cb83"/>
+         <source file="..\obj\stm32f4xx_fmc.o" lastModified="1541522ce23"/>
+         <source file="..\obj\usbd_req.o" lastModified="1541522d0c3"/>
+         <source file="..\obj\usb_dcd_int.o" lastModified="1541522d363"/>
+         <source file="..\obj\stm32f4xx_spi.o" lastModified="1541522d631"/>
+         <source file="..\obj\stm32f4xx_i2c.o" lastModified="1541522d910"/>
+         <source file="..\obj\stm32f4xx_rng.o" lastModified="1541522dbb0"/>
+         <source file="..\obj\stm32f4xx_exti.o" lastModified="1541522de30"/>
+         <source file="..\obj\misc.o" lastModified="1541522e0b1"/>
+         <source file="..\obj\usb_dcd.o" lastModified="1541522e360"/>
+         <source file="..\obj\tm_stm32f4_gpio.o" lastModified="1541522e5f1"/>
+         <source file="..\obj\stm32f4_discovery_lis302dl.o" lastModified="1541522e891"/>
+         <source file="..\obj\stm32f4xx_rtc.o" lastModified="1541522eb7f"/>
+         <source file="..\obj\usbd_ioreq.o" lastModified="1541522ee0f"/>
+         <source file="..\obj\stm32f4xx_cryp_tdes.o" lastModified="1541522f08f"/>
+         <source file="..\obj\stm32f4xx_tim.o" lastModified="1541522f38d"/>
+         <source file="..\obj\stm32f4xx_dbgmcu.o" lastModified="1541522f5fe"/>
+      </target>
+   </processor>
+</history>

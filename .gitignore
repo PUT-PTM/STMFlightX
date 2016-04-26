@@ -13,6 +13,9 @@ ExportedObj/
 *.suo
 *.tmp
 *.user
+*.ini
+*.hex
+*.controller
 *.stamp
 *.resource
 *.bakeup
@@ -30,6 +33,7 @@ ExportedObj/
 *.pidb
 *.booproj
 *.svd
+<<<<<<< HEAD
 *.meta
 *.prefs
 *.dwlt
@@ -66,9 +70,18 @@ ExportedObj/
 *.cginc
 *.txt
 *.caw
+*.bmp
 *.iws.sse
 *.rgb
 *.ecm
+*.coproj
+*.comarker
+*.cogui
+*.xml
+*.elf
+*.o
+*.bin
+*.log
 
 
 # Unity3D generated meta files
@@ -78,3 +91,5 @@ ExportedObj/
 
 # Unity3D Generated File On Crash Reports
 sysinfo.txt
+*.spm
+source_files/Flight/Library/metadata/00/00000000000000001000000000000000

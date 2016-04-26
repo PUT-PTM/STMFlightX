@@ -34,6 +34,7 @@ ExportedObj/
 *.booproj
 *.svd
 <<<<<<< HEAD
+<<<<<<< HEAD
 *.meta
 *.prefs
 *.dwlt
@@ -78,11 +79,16 @@ ExportedObj/
 *.comarker
 *.cogui
 *.xml
+=======
+>>>>>>> origin/master
 *.elf
 *.o
 *.bin
 *.log
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 
 # Unity3D generated meta files
 *.pidb.meta

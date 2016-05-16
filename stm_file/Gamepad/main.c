@@ -65,23 +65,39 @@ int main(void) {
 			LIS302DL_Read(&acc_x,LIS302DL_OUT_X_ADDR,1);
 			LIS302DL_Read(&acc_y,LIS302DL_OUT_Y_ADDR,1);
 			LIS302DL_Read(&acc_z,LIS302DL_OUT_Z_ADDR,1);
-
+			/*
 			if(acc_y < 240 && acc_y > 190){
-				Keyboard.Key1 = 0x51; /* DOWN ARROW */
+				Keyboard.Key1 = 0x51; /* DOWN ARROW
 				TM_USB_HIDDEVICE_KeyboardSend(&Keyboard);
 			}else if(acc_y > 20 && acc_y < 60){
-				Keyboard.Key1 = 0x52; /* UP ARROW */
+				Keyboard.Key1 = 0x52; /* UP ARROW
 				TM_USB_HIDDEVICE_KeyboardSend(&Keyboard);
 			}else if(acc_x > 210 && acc_x < 245){
-				Keyboard.Key1 = 0x50; /* LEFT ARROW */
+				Keyboard.Key1 = 0x50; /* LEFT ARROW
 				TM_USB_HIDDEVICE_KeyboardSend(&Keyboard);
 			}else if(acc_x > 10 && acc_x < 60){
-				Keyboard.Key1 = 0x4F; /* RIGHT ARROW */
+				Keyboard.Key1 = 0x4F; /* RIGHT ARROW
 				TM_USB_HIDDEVICE_KeyboardSend(&Keyboard);
 			}else{
-				Keyboard.Key1 = 0x00; /* No key */
+				Keyboard.Key1 = 0x00; /* No key
 				TM_USB_HIDDEVICE_KeyboardSend(&Keyboard);
+			}*/
+
+			if(acc_y < 240 && acc_y > 190){
+				Gamepad1.LeftYAxis = 0; /* Y axis */
+			}else if(acc_y > 20 && acc_y < 60){
+				Gamepad1.LeftYAxis = 127; /* Y axis */
+			}else if(acc_x > 210 && acc_x < 245){
+				Gamepad1.LeftXAxis = 127; /* X axis */
+			}else if(acc_x > 10 && acc_x < 60){
+				Gamepad1.LeftXAxis = 0; /* X axis */
 			}
+			else{
+				Gamepad1.LeftYAxis = 64; /* Y axis */
+				Gamepad1.LeftXAxis = 64; /* X axis */
+			}
+
+			TM_USB_HIDDEVICE_GamepadSend(TM_USB_HIDDEVICE_Gamepad_Number_1, &Gamepad1);
 		}else {
 			/* Turn off green LED */
 			TM_DISCO_LedOff(LED_GREEN);

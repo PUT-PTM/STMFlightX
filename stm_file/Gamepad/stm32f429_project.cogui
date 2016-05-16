@@ -36,9 +36,9 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/stm32f429_project/defines.h"/>
 <editorState selectionHorizontalPixel="0" selectionLength="2" selectionOffset="183" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="F:/Studia/Semestr 4/PTM/ProjektCocox/main.c" title="main.c" tooltip="F:/Studia/Semestr 4/PTM/ProjektCocox/main.c" workbook="DefaultEditorWorkbook">
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="F:/Studia/Semestr 4/PTM/STMFlightX/stm_file/CocoxGamepad/main.c" title="main.c" tooltip="F:/Studia/Semestr 4/PTM/STMFlightX/stm_file/CocoxGamepad/main.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/stm32f429_project/main.c"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="233" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="321" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="tm_stm32f4_usb_hid_device.c" partName="tm_stm32f4_usb_hid_device.c" path="F:/Studia/Semestr 4/PTM/ProjektCocox/tm_stm32f4_usb_hid_device.c" title="tm_stm32f4_usb_hid_device.c" tooltip="F:/Studia/Semestr 4/PTM/ProjektCocox/tm_stm32f4_usb_hid_device.c" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/stm32f429_project/tm/tm_stm32f4_usb_hid_device.c"/>
@@ -66,21 +66,18 @@
 <element path="/stm32f429_project/cmsis_lib/source"/>
 <element path="/stm32f429_project/tm"/>
 </expanded>
-<selection>
-<element path="/stm32f429_project/tm/stm32f4_discovery_lis302dl.c"/>
-</selection>
 </viewState>
 </view>
 <view id="org.coocox.component.ui.ComponentView" partName="Components">
+<viewState/>
+</view>
+<view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting">
 <viewState/>
 </view>
 <view id="org.coocox.builder.ui.exampleView" partName="CMSIS BOOT Examples">
 <viewState>
 <Examples ComponentId="500" Title="CMSIS BOOT"/>
 </viewState>
-</view>
-<view id="org.coocox.codebugger.trace.ui.traceview" partName="Semihosting">
-<viewState/>
 </view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
@@ -95,7 +92,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.coocox.builder.perspective.CoBuilder">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.coocox.builder.perspective.CoBuilder">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.coocox.builder.ui.PerspectiveCoBuilder" id="org.coocox.builder.perspective.CoBuilder" label="CooCox CoBuilder"/>
 <alwaysOnActionSet id="org.coocox.component.ui.actionSet"/>

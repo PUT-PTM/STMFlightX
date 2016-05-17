@@ -10,6 +10,13 @@ public class PlanePilot : MonoBehaviour {
         //cube.AddComponent<Rigidbody>();
 	}
 
+    IEnumerator i()
+    {
+        float a = 5;
+        yield return new WaitForSeconds(a);
+        //Application.LoadLevel(Application.loadedLevel);
+    }
+
 	void Update () {
 
         //chase cam
@@ -47,6 +54,8 @@ public class PlanePilot : MonoBehaviour {
             {
                 Destroy(gameObject);
                 var plane = GameObject.Instantiate(GameObject.Find("Detonator-Insanity"), new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                StartCoroutine(i());  //delay
+               Application.LoadLevel(Application.loadedLevel);
             }
         }
         //back wall collision
@@ -57,6 +66,8 @@ public class PlanePilot : MonoBehaviour {
             {
                 Destroy(gameObject);
                 var plane = GameObject.Instantiate(GameObject.Find("Detonator-Insanity"), new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                StartCoroutine(i());
+                Application.LoadLevel(Application.loadedLevel);
             }
         }
         //left wall collision
@@ -67,6 +78,8 @@ public class PlanePilot : MonoBehaviour {
             {
                 Destroy(gameObject);
                 var plane = GameObject.Instantiate(GameObject.Find("Detonator-Insanity"), new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                StartCoroutine(i());
+                Application.LoadLevel(Application.loadedLevel);
             }
         }
         //right wall collision
@@ -77,6 +90,8 @@ public class PlanePilot : MonoBehaviour {
             {
                 Destroy(gameObject);
                 var plane = GameObject.Instantiate(GameObject.Find("Detonator-Insanity"), new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                StartCoroutine(i());
+                Application.LoadLevel(Application.loadedLevel);
             }
         }
         //front wall collision
@@ -87,6 +102,7 @@ public class PlanePilot : MonoBehaviour {
             {
                 Destroy(gameObject);
                 var plane = GameObject.Instantiate(GameObject.Find("Detonator-Insanity"), new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+                Application.LoadLevel(Application.loadedLevel);
             }
         }
 

@@ -8,7 +8,7 @@
 #include "tm/tm_stm32f4_disco.h"
 #include "stm32f4_discovery_lis302dl.h"
 
-int acc_x, acc_y, acc_z;
+int acc_x, acc_y, acc_z, up=64, down=64, left=64, right=64, x, y;
 
 void initAccelerometer()
 {
@@ -65,37 +65,36 @@ int main(void) {
 			LIS302DL_Read(&acc_x,LIS302DL_OUT_X_ADDR,1);
 			LIS302DL_Read(&acc_y,LIS302DL_OUT_Y_ADDR,1);
 			LIS302DL_Read(&acc_z,LIS302DL_OUT_Z_ADDR,1);
-			/*
-			if(acc_y < 240 && acc_y > 190){
-				Keyboard.Key1 = 0x51; /* DOWN ARROW
-				TM_USB_HIDDEVICE_KeyboardSend(&Keyboard);
-			}else if(acc_y > 20 && acc_y < 60){
-				Keyboard.Key1 = 0x52; /* UP ARROW
-				TM_USB_HIDDEVICE_KeyboardSend(&Keyboard);
-			}else if(acc_x > 210 && acc_x < 245){
-				Keyboard.Key1 = 0x50; /* LEFT ARROW
-				TM_USB_HIDDEVICE_KeyboardSend(&Keyboard);
-			}else if(acc_x > 10 && acc_x < 60){
-				Keyboard.Key1 = 0x4F; /* RIGHT ARROW
-				TM_USB_HIDDEVICE_KeyboardSend(&Keyboard);
-			}else{
-				Keyboard.Key1 = 0x00; /* No key
-				TM_USB_HIDDEVICE_KeyboardSend(&Keyboard);
-			}*/
 
-			if(acc_y < 240 && acc_y > 190){
-				Gamepad1.LeftYAxis = 0; /* Y axis */
-			}else if(acc_y > 20 && acc_y < 60){
-				Gamepad1.LeftYAxis = 127; /* Y axis */
-			}else if(acc_x > 210 && acc_x < 245){
-				Gamepad1.LeftXAxis = 127; /* X axis */
-			}else if(acc_x > 10 && acc_x < 60){
-				Gamepad1.LeftXAxis = 0; /* X axis */
+			if(acc_y < 250 && acc_y > 200){
+			    down = (acc_y - 200) * 1.3;
+			    down = down < 0 ? 0 : down;
+				Gamepad1.LeftYAxis = down; /* Y axis */
 			}
-			else{
+			else if(acc_y > 10 && acc_y < 60){
+			    up = acc_y + 80;
+				up = up > 127 ? 127 : up;
+			    Gamepad1.LeftYAxis = up; /* Y axis */
+			}
+			if(acc_x > 200 && acc_x < 250){
+				right = (320 - acc_x) * 1.27;
+				right = right > 127 ? 127 : right;
+				Gamepad1.LeftXAxis = right; /* X axis */
+			}
+			else if(acc_x > 10 && acc_x < 60){
+				left = (50 -  acc_x) * 1.3;
+				left = left < 0 ? 0 : left;
+				Gamepad1.LeftXAxis = left; /* X axis */
+			}
+			if(acc_x < 10 && acc_y < 10){
 				Gamepad1.LeftYAxis = 64; /* Y axis */
 				Gamepad1.LeftXAxis = 64; /* X axis */
+				right = 64;
+				left = 64;
 			}
+			//Diagnostic variables
+			x = Gamepad1.LeftXAxis;
+			y = Gamepad1.LeftYAxis;
 
 			TM_USB_HIDDEVICE_GamepadSend(TM_USB_HIDDEVICE_Gamepad_Number_1, &Gamepad1);
 		}else {

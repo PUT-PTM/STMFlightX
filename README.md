@@ -6,12 +6,13 @@ STMFlightX is a simple, 3D game which works on Unity 3D engine. Our project impl
 
 #DESCRIPTION
 
-Display Resolution:
-Interface:
+Display Resolution: Default 1024x768 (changeable)
+Interface: 3D
 
 Our functions:
 
-The most important files in a project:
+- FlightX_v1.0.exe
+- stm32f429_project.elf
 
 Tools:
 
@@ -21,11 +22,11 @@ Tools:
 
 #HOW TO RUN?
 
-All you have to do is run FlightX.exe file and click START button. It's important to plug-in STM32F4 device by an USB wire as a standard keyboard. 
+All you have to do is run FlightX_v1.0.exe file and click START button. It's important to plug-in STM32F4 device by an USB wire as a HID gamepad. If your computer doesn't see STM as a gamepad you could install a stm32f429_project.elf file on it. 
 
 #GAMEPLAY
 
-Welcome in a world of FlightX 3D! This project is a combination of flight simulator and preety simple arcade game. You need to flight a plane and collect special bonuses hovering in the air. This requires a great skills of flying and manipulating. Are you ready? ENJOY THE GAME!
+Welcome in FlightX 3D! This project is a combination of flight simulator and preety simple arcade game. You need to flight a plane and collect special bonuses hovering in the air. This requires a great skills of flying and manipulating. Are you ready? ENJOY THE GAME!
 
 #STEERING GUIDE
 
@@ -39,6 +40,8 @@ Use your STM32F4 to control your plane.
 
 - Multiplayer mode
 - In the future you will be able to choose from one of the many colorful aircrafts!
+- More levels
+- Better soundtracks
 
 #CREDITS
 

@@ -1,18 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour {
 
-    public float timer = 120;
+
+    private float timer = ScoreCount.tim;
     GameObject[] gameover;
     bool showResult = false;
+    public static Timer instance;
+
+    public float CurrentTime()
+    {
+        return timer;
+    }
+
+    public void setter(float value)
+    {
+        timer = value;
+    }
 
     void Start()
     {
         Time.timeScale = 1;
         gameover = GameObject.FindGameObjectsWithTag("ShowOnGameOver");
         hideGameOver();
+        instance = this;
     }
 
     void Update () {
@@ -26,8 +40,9 @@ public class Timer : MonoBehaviour {
                 showResult = true;
                 OnGUI();
             }
-            timer = 0;
+
         }
+
 	}
 
     void OnGUI()
@@ -38,7 +53,21 @@ public class Timer : MonoBehaviour {
         }
         else
         {
-            GUI.Label(new Rect(650, 200, 100, 50), "Your result " + ScoreCount.score);
+            GUI.Label(new Rect(650, 250, 100, 50), "Your result " + ScoreCount.score);
+            GUI.Label(new Rect(650, 280, 100, 50), "Press 'm' to return to Main Menu");
+            GUI.Label(new Rect(650, 310, 100, 50), "Press 'r' to reload");
+
+            if (Input.GetKeyDown(KeyCode.M))
+            {
+                SceneManager.LoadScene(0);
+                ScoreCount.score = 0;
+            }
+
+            if (Input.GetKeyDown(KeyCode.R))
+            {
+                Application.LoadLevel(Application.loadedLevel);
+                ScoreCount.score = 0;
+            }
         }
     }
 
